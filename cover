@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Library</title>
+  <style>
+    :root {
+      --paper: #f5eddd;
+      --ink: #30251d;
+      --wood: #35241b;
+      --brass: #edcca0;
+      --rule: #bda88d;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 1.1rem/1.65 Georgia, serif;
+    }
+
+    .masthead {
+      padding: 2.5rem clamp(1.25rem, 6vw, 5rem);
+      background: var(--wood);
+      color: var(--paper);
+      border-bottom: 4px solid #a27e51;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      margin-bottom: .4rem;
+      font-size: clamp(3rem, 7vw, 5rem);
+      font-weight: normal;
+      line-height: 1;
+    }
+
+    .masthead p { margin-bottom: 0; color: var(--brass); }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 15rem minmax(0, 1fr);
+      max-width: 72rem;
+      margin: 0 auto;
+      min-height: 70vh;
+    }
+
+    nav {
+      padding: 2rem 1.5rem;
+      background: #e9dcc6;
+      border-right: 1px solid var(--rule);
+    }
+
+    nav h2, .category {
+      margin-bottom: .75rem;
+      font: 700 .8rem/1.4 system-ui, sans-serif;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    nav ul { padding-left: 1.25rem; }
+    a { color: #633c2b; text-underline-offset: .2em; }
+
+    article { padding: 2rem clamp(1.25rem, 5vw, 4rem); }
+    article h2 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; }
+    section { border-top: 1px solid var(--rule); padding-top: 1rem; }
+    section + section { margin-top: 1.5rem; }
+
+    @media (max-width: 640px) {
+      .layout { grid-template-columns: 1fr; }
+      nav { border-right: 0; border-bottom: 1px solid var(--rule); }
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <h1>The Library</h1>
+    <p>Notes on sociological theory and research</p>
+  </header>
+
+  <main class="layout">
+    <nav aria-labelledby="catalog">
+      <h2 id="catalog">Catalog</h2>
+      <strong>Theories</strong>
+      <ul>
+        <li><a href="#rational-choice">Rational Choice Theory</a></li>
+      </ul>
+    </nav>
+
+    <article id="rational-choice">
+      <p class="category">Theories</p>
+      <h2>Rational Choice Theory</h2>
+
+      <section>
+        <h3>Overview</h3>
+        <p>Add your definition of rational choice theory here.</p>
+      </section>
+
+      <section>
+        <h3>Key Concepts</h3>
+        <p>Add the concepts you want to explain and compare.</p>
+      </section>
+
+      <section>
+        <h3>Reading Notes</h3>
+        <ul>
+          <li>Paternoster (1989), <cite>Absolute and Restrictive
+            Deterrence in a Panel of Youth</cite></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
